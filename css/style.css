@@ -1,0 +1,192 @@
+/* Подключаем шрифт через плагин - выбираются все варианты, убираем не нужное. 
+при работе с Gulp не выдает ошибок */
+/* Хвостик для подключения кириллицы - &display=swap&subset=cyrillic-ext, 
+для латиницы - display=swap */
+@import url("https://fonts.googleapis.com/css?family=Lato:regular,700display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lora:regular,700display=swap");
+
+/* Подключаем шрифт с google fonts - выбираем варианты подключения сами */
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap"); */
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-ThinItalic.woff2") format("woff2"), url("../fonts/Gilroy-ThinItalic.woff") format("woff");
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Обнулящие стили */
+
+/* Обнуляем отступы и границы всех элементов */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+/* Обнуляем оформление элементов списка */
+li {
+	text-decoration: none;
+}
+
+/* Обнуляем оформление элементов заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/* размер заголовка */
+	font-size: inherit;
+	/* толщина текста заголовка */
+	font-weight: inherit;
+}
+/* Обнуляем фантомный отступ под картинкой */
+img {
+	vertical-align: top;
+}
+
+/* Добавляем обнуление к тэгу body */
+body {
+	/* Семейство шрифта по умолчанию*/
+	/*
+	color: #000;
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	*/
+	/* У нас в макете основной шрифт Lato - подсключаем его */
+	/* 
+	font-size: 16px; - стандарт по умолчанию,
+	можем е писать
+	*/
+	/* line-height - межстрочный интервал */
+	color: #9a9a9a;
+	line-height: 1;
+	font-family: Lato;
+}
+
+/* На данный момент весь код обнуления */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Свойства шрифтов */
+/*
+.text {
+/* Определяет размер шрифта, можно записывать fz20 */
+/*	font-size: 20px;
+}
+/* font-style - начертание шрифта */
+
+/* Устанавливает насыщенность шрифта */
+/* font-weight: - значения от 100 до 900, но не у каждого
+шрифта работают все значения*/
+
+/* ECSS - copy classes - CTRL+ALT+1, 
+paste classes - CTRL+V */
+
+/* В макете у нас второй шрифт Lora, который мы 
+используем в заголовках, его добавляем */
+/*
+.title {
+	color: #000;
+	font-family: Lora;
+}
+*/
+
+/*
+.text {
+	/* Устанавливает семейство шрифта */
+/* font-family: "Имя шрифта", "Имя шрифта", тип шрифта */
+/*
+	/* font-family: 'Times New Roman', ; */
+/*font-family: ;
+}
+*/
+
+/* 
+Файл № 1
+'Times New Roman'
+font-sryle: normal;
+font-weight: normal;
+
+Файл № 2
+'Times New Roman'
+font-sryle: italic ;
+font-weight: normal;
+
+Файл № 3
+'Times New Roman'
+font-sryle: italic ;
+font-weight: 700;
+
+Файл № 4
+'Times New Roman'
+font-sryle: normal;
+font-weight: 700;
+
+ */
+
+.list {
+	text-decoration: underline;
+}
+
+.text {
+	font-size: 20px;
+	letter-spacing: 10px;
+	word-spacing: nowrap;
+}
+
+.title span {
+	color: rgb(228, 47, 1);
+	text-decoration: line-through;
+}
+
+.title {
+	font-family: Lora;
+	font-weight: 700;
+	font-size: 52px;
+	color: #10375c;
+	text-align: justify;
+	text-shadow: 8px 8px 12px rgb(0, 0, 0, 0.8);
+	line-height: 150%;
+}
+
+.gilroy {
+	font-family: Gilroy;
+	font-weight: 600;
+	font-style: italic;
+	text-decoration: line-through;
+	text-transform: capitalize;
+	text-indent: 50px;
+	word-spacing: 10px;
+}
+
+.block {
+	/* Так можно выравниваь текст в строчном теге */
+	text-align: right;
+}
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* Свойства текста */
